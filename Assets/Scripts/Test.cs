@@ -6,8 +6,7 @@ public class Test : MonoBehaviour
     void Start()
     {
         int x = 10;
-        int y = 20;
-        int sum = x + y;
+        Debug.Log(x);
     }
 
     // Update is called once per frame
