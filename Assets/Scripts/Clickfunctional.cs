@@ -21,7 +21,7 @@ public class Clickfunctional : MonoBehaviour
     //        rb.AddForce(dir * jumpForce, ForceMode2D.Impulse);
     //    }
     //}
-    public float speed = 5f;
+    public float speed = 50f;
     private Rigidbody2D rb;
 
     void Start()
@@ -47,7 +47,22 @@ public class Clickfunctional : MonoBehaviour
 
         // Շարժում Rigidbody-ով
         rb.linearVelocity = direction * speed;
+        bool isPressed =
+            (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed) ||
+            (Mouse.current != null && Mouse.current.leftButton.isPressed);
+
+        if (isPressed)
+            direction = new Vector2(1f, 1f).normalized;
+        else
+            direction = new Vector2(1f, -1f).normalized;
+
+        rb.linearVelocity = direction * speed;
+
+        // ⬇️ ՍԼԱՔԻ ՊՏՏՈՒՄԸ ՇԱՐԺՄԱՆ ՈՒՂՂՈՒԹՅԱՄԲ
+        if (rb.linearVelocity.sqrMagnitude > 0.001f)
+        {
+            float angle = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg;
+            rb.rotation = angle - 110f;
+        }
     }
-
-
 }
