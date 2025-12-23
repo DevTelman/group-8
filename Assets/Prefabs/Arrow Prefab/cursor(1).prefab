@@ -178,4 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162d6a163506d5643b379269f838c93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickfunctional
-  speed: 3
+  speed: 100
