@@ -8,13 +8,18 @@ public class CameraCod : MonoBehaviour
     public Transform target;   
 
    
-    public float offsetX = 3f;
+    public float offsetX = -4f;
 
     void LateUpdate()
     {
+        if (target == null) return;
+
         Vector3 pos = transform.position;
         pos.x = target.position.x + offsetX;
         transform.position = pos;
+        if (target == null) return;
+
     }
 }
+
 
