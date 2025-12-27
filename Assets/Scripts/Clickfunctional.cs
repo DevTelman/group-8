@@ -6,7 +6,7 @@ public class Clickfunctional : MonoBehaviour
 {
     public float speed = 3f;
     private Rigidbody2D rb;
-
+    public float direction1 = 110f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,7 +42,7 @@ public class Clickfunctional : MonoBehaviour
         if (rb.linearVelocity.sqrMagnitude > 0.001f)
         {
             float angle = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg;
-            rb.rotation = angle - 110f;
+            rb.rotation = angle - direction1;
         }
     }
 }
