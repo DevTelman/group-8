@@ -5,9 +5,8 @@ using static UnityEngine.GraphicsBuffer;
 public class CameraCod : MonoBehaviour
 {
  
-    public Transform target;   
-
-   
+    public Transform target;
+    public float maxX = 20f;
     public float offsetX = -4f;
 
     void LateUpdate()
@@ -15,11 +14,14 @@ public class CameraCod : MonoBehaviour
         if (target == null) return;
 
         Vector3 pos = transform.position;
-        pos.x = target.position.x + offsetX;
-        transform.position = pos;
-        if (target == null) return;
+        if (pos.x < maxX)
+        {
+            pos.x = target.position.x + offsetX;
+        }
 
+        transform.position = pos;
     }
+
 }
 
 
