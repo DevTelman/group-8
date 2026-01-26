@@ -17,6 +17,5 @@ public class ClickAction : MonoBehaviour
     public void DoAction()
     {
         Debug.Log("Գործառույթը կատարվեց");
-
     }
 }
