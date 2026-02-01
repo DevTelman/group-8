@@ -47458,7 +47458,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7423316127977850729, guid: 7d6743ff7934e344d8d4dbc5f8af34e2, type: 3}
   m_PrefabInstance: {fileID: 4111948152431378936}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1379521819
+--- !u!114 &1379521816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47467,9 +47467,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379521814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 016b50a0e273d7b49a4aa4fd7d176d1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 441d4cbb2c8853c458f39c7e9ae01cbb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  m_EditorClassIdentifier: Assembly-CSharp::TryAgain
+  tryAgainButton: {fileID: 1379521817}
+--- !u!114 &1379521817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6025296969273215402, guid: 7d6743ff7934e344d8d4dbc5f8af34e2, type: 3}
+  m_PrefabInstance: {fileID: 4111948152431378936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379521814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1380610240
 GameObject:
   m_ObjectHideFlags: 0
@@ -75208,6 +75220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 3154603983082983938, guid: 7d6743ff7934e344d8d4dbc5f8af34e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7423316127977850729, guid: 7d6743ff7934e344d8d4dbc5f8af34e2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -75294,7 +75310,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3154603983082983938, guid: 7d6743ff7934e344d8d4dbc5f8af34e2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1379521819}
+      addedObject: {fileID: 1379521816}
   m_SourcePrefab: {fileID: 100100000, guid: 7d6743ff7934e344d8d4dbc5f8af34e2, type: 3}
 --- !u!1001 &4162398991392044937
 PrefabInstance:
@@ -76819,6 +76835,6 @@ SceneRoots:
   - {fileID: 7814095190104909856}
   - {fileID: 831104347}
   - {fileID: 334863357299601580}
-  - {fileID: 6975670951010295145}
   - {fileID: 944364129}
   - {fileID: 1426434008}
+  - {fileID: 6975670951010295145}
