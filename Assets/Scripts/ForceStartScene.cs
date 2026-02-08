@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public static class AutoStartScene
 {
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void LoadStartScene()
     {
         int startSceneIndex = 0;
