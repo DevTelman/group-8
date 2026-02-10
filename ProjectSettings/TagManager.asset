@@ -8,6 +8,8 @@ TagManager:
   - Safe
   - Star
   - Arrow
+  - CollectedStarsText
+  - Garbage
   layers:
   - Default
   - TransparentFX
