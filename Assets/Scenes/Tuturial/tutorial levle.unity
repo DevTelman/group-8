@@ -361,6 +361,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+--- !u!1 &568592532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3557885465657244062, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+  m_PrefabInstance: {fileID: 568592531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787465776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1653672775193298689, guid: 7e0c68e2641ce69418ac38f701918a9b, type: 3}
@@ -379,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoseOnAnyCollision
   gameOverCanvas: {fileID: 4953462481084162235}
-  winCanvas: {fileID: 0}
+  winCanvas: {fileID: 568592532}
   safeTag: Safe
 --- !u!4 &1125749916 stripped
 Transform:
