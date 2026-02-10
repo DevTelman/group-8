@@ -62318,7 +62318,7 @@ Transform:
   m_GameObject: {fileID: 1578499050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.16447686, w: 0.986381}
-  m_LocalPosition: {x: 309.27, y: 4.01, z: 0}
+  m_LocalPosition: {x: 309.52, y: 4.34, z: 0}
   m_LocalScale: {x: 0.1946532, y: 0.1946532, z: 0.1946532}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75029,6 +75029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: try Again
       objectReference: {fileID: 0}
+    - target: {fileID: 1757295119785956846, guid: 94ab9e6055d1733429621c062f33c203, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7683164401861269598, guid: 94ab9e6055d1733429621c062f33c203, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.53353
@@ -75074,6 +75078,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94ab9e6055d1733429621c062f33c203, type: 3}
+--- !u!114 &1957511476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8856559972054063368, guid: 94ab9e6055d1733429621c062f33c203, type: 3}
+  m_PrefabInstance: {fileID: 1957511474}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441d4cbb2c8853c458f39c7e9ae01cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TryAgainButton
 --- !u!1 &1957621490
 GameObject:
   m_ObjectHideFlags: 0
@@ -76878,6 +76893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 447400719480865036, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1197119819245034799, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
       propertyPath: m_Name
       value: Game Over-Canvas
@@ -76885,6 +76904,18 @@ PrefabInstance:
     - target: {fileID: 1197119819245034799, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109722826329053860, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1957511476}
+    - target: {fileID: 9109722826329053860, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109722826329053860, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TryAgain, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
