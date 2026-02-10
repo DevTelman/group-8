@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - Safe
+  - Star
+  - Arrow
   layers:
   - Default
   - TransparentFX
