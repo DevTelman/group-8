@@ -6408,10 +6408,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Win-Canvas '
       objectReference: {fileID: 0}
-    - target: {fileID: 3557885465657244062, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5102802349009726516, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11132,7 +11128,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1094449670983022493, guid: 847ef9af124be974990bb090379918d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.92
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 1094449670983022493, guid: 847ef9af124be974990bb090379918d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19455,6 +19451,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &507082890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507082892}
+  - component: {fileID: 507082891}
+  m_Layer: 0
+  m_Name: ProgressBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &507082891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507082890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45846f075cb9a4d45855178dc5519172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressBar
+  player: {fileID: 319589703}
+  endX: 430.17
+  fillImage: {fileID: 2054206379}
+--- !u!4 &507082892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507082890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 827.3239, y: 789.01996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519942656
 GameObject:
   m_ObjectHideFlags: 0
@@ -21135,7 +21178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.56
+      value: -21.11
       objectReference: {fileID: 0}
     - target: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31769,7 +31812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143405251238068556, guid: 4f18dd5af4764bc42a4b3b990acd6973, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.29999995
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 9143405251238068556, guid: 4f18dd5af4764bc42a4b3b990acd6973, type: 3}
       propertyPath: m_LocalPosition.y
@@ -56208,8 +56251,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286392859
-  m_fontColor: {r: 0.10588236, g: 0.16470589, b: 0.4901961, a: 1}
+    rgba: 4294947328
+  m_fontColor: {r: 0, g: 0.69684935, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -78048,30 +78091,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 447400719480865036, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1197119819245034799, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
       propertyPath: m_Name
       value: Game Over-Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197119819245034799, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9109722826329053860, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1957511476}
-    - target: {fileID: 9109722826329053860, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 9109722826329053860, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TryAgain, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -81586,6 +81613,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2054206378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054206381}
+  - component: {fileID: 2054206380}
+  - component: {fileID: 2054206379}
+  m_Layer: 0
+  m_Name: Image (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2054206379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054206378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8352941}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 26b7ba3f75a4eaf45861c856ef6646ad, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2054206380
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054206378}
+  m_CullTransparentMesh: 1
+--- !u!224 &2054206381
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054206378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1346565148}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 29, y: -103.4}
+  m_SizeDelta: {x: 1170, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2054384667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4363714030745231566, guid: 72746273846667f4fa17273ad2750766, type: 3}
@@ -100216,7 +100318,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.67, y: 5.34}
+  m_Size: {x: 4.08, y: 5.19}
   m_EdgeRadius: 0
 --- !u!1 &7095874364237056976
 GameObject:
@@ -101919,6 +102021,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2198306148022502291, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1096630742}
+    - targetCorrespondingSourceObject: {fileID: 2198306148022502291, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2054206381}
     - targetCorrespondingSourceObject: {fileID: 2198306148022502291, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 146107469}
@@ -104690,3 +104795,4 @@ SceneRoots:
   - {fileID: 1931452365}
   - {fileID: 1995975511}
   - {fileID: 1604082332}
+  - {fileID: 507082892}
