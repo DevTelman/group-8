@@ -5,8 +5,8 @@ using UnityEngine;
 public class CountdownStart : MonoBehaviour
 {
     public TMP_Text countdownText;
-    public AudioSource countdownAudio; // 3-2-1-GO ձայնը
-    public AudioSource musicSource;    // Խաղի հիմնական երաժշտություն
+    public AudioSource countdownAudio;
+    public AudioSource musicSource;
 
     void Start()
     {
@@ -16,7 +16,6 @@ public class CountdownStart : MonoBehaviour
 
     IEnumerator StartCountdown()
     {
-        // Միանգամից նվագել 3-2-1-GO ձայնը
         if (countdownAudio != null)
             countdownAudio.Play();
 
@@ -29,14 +28,11 @@ public class CountdownStart : MonoBehaviour
             count--;
         }
 
-        // GO!
         countdownText.text = "GO!";
         yield return StartCoroutine(AnimateCountdown(countdownText));
 
-        // Թեքստը թաքցնել
         countdownText.gameObject.SetActive(false);
 
-        // Խաղը վերսկսել և հիմնական երաժշտությունը միացնել
         Time.timeScale = 1f;
         if (musicSource != null)
             musicSource.Play();
@@ -55,12 +51,10 @@ public class CountdownStart : MonoBehaviour
         {
             t += Time.unscaledDeltaTime;
 
-            // Scale animation + փոքր bounce
             float scale = Mathf.Lerp(0f, 2f, t / duration);
             scale += Mathf.Sin(t * Mathf.PI * 2) * 0.2f;
             text.transform.localScale = Vector3.one * scale;
 
-            // Fade In
             float alpha = Mathf.Lerp(0f, 1f, t / duration);
             text.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
 
