@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/General  page/first page.unity
     guid: 4f5327c64b3ec3e45a5c615b83b47ec9
   - enabled: 1
+    path: Assets/Scenes/LevelChoose/New Scene.unity
+    guid: 63c3a6370b84bf04aa74820671d52d1f
+  - enabled: 1
     path: Assets/Scenes/Tuturial/tutorial levle.unity
     guid: f56f08c0b21cc0e4a8aa3fce5a152bc4
+  - enabled: 1
+    path: Assets/Scenes/level 1/level 1.unity
+    guid: ef4c4240fd1ccc5439ff241b55056be9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

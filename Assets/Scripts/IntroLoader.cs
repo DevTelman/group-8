@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IntroLoader : MonoBehaviour
@@ -12,44 +13,61 @@ public class IntroLoader : MonoBehaviour
     public float firstPhaseTime = 2.5f;
     public float secondPhaseTime = 2.5f;
 
+    // Այս փոփոխականը պահում է, աշխատե՞լ է Loader-ը արդեն
+    private static bool loaderPlayed = false;
+
     void Start()
     {
-        startButton.SetActive(false);
-        hubButton.SetActive(false);
+        // Loader-ը աշխատում է միայն առաջին սցենար + առաջին անգամ բացվելիս
+        if (SceneManager.GetActiveScene().buildIndex == 0 && !loaderPlayed)
+        {
+            loaderPlayed = true; // նշում ենք, որ Loader-ը սկսեց աշխատել
 
-        loaderCircle.fillAmount = 0f;
-        loaderImage.SetActive(true);
+            startButton.SetActive(false);
+            hubButton.SetActive(false);
 
-        StartCoroutine(LoadingSequence());
+            loaderCircle.fillAmount = 0f;
+            loaderCircle.gameObject.SetActive(true);
+            loaderImage.SetActive(true);
+
+            StartCoroutine(LoadingSequence());
+        }
+        else
+        {
+            // Այլ դեպքերում Loader-ը ընդհանրապես չի երևում
+            loaderCircle.gameObject.SetActive(false);
+            loaderImage.SetActive(false);
+            startButton.SetActive(true);
+            hubButton.SetActive(true);
+        }
     }
 
     IEnumerator LoadingSequence()
     {
-        yield return StartCoroutine(FillTo(0f, 0.5f, firstPhaseTime));
-
-        yield return new WaitForSeconds(0.2f);
-
-        yield return StartCoroutine(FillTo(0.5f, 1f, secondPhaseTime));
-
-        loaderImage.SetActive(false);
-        loaderCircle.gameObject.SetActive(false);
-
-        startButton.SetActive(true);
-        hubButton.SetActive(true);
-    }
-
-    IEnumerator FillTo(float from, float to, float duration)
-    {
         float elapsed = 0f;
-        loaderCircle.fillAmount = from;
 
-        while (elapsed < duration)
+        // Առաջին փուլ
+        while (elapsed < firstPhaseTime)
         {
             elapsed += Time.deltaTime;
-            loaderCircle.fillAmount = Mathf.Lerp(from, to, elapsed / duration);
+            loaderCircle.fillAmount = Mathf.Lerp(0f, 0.5f, elapsed / firstPhaseTime);
             yield return null;
         }
 
-        loaderCircle.fillAmount = to;
+        yield return new WaitForSeconds(0.2f);
+
+        // Երկրորդ փուլ
+        elapsed = 0f;
+        while (elapsed < secondPhaseTime)
+        {
+            elapsed += Time.deltaTime;
+            loaderCircle.fillAmount = Mathf.Lerp(0.5f, 1f, elapsed / secondPhaseTime);
+            yield return null;
+        }
+
+        loaderCircle.gameObject.SetActive(false);
+        loaderImage.SetActive(false);
+        startButton.SetActive(true);
+        hubButton.SetActive(true);
     }
 }
