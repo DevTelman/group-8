@@ -12,12 +12,14 @@ public class Star : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (collected) return;
+        if (collected)
+            return;
 
         if (other.transform.root.CompareTag("Player"))
         {
             collected = true;
             starManager.CollectStar();
+            GameManager.instance.AddStar();
             Destroy(gameObject);
         }
     }

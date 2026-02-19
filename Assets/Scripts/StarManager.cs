@@ -17,7 +17,8 @@ public class StarManager : MonoBehaviour
 
     public void CollectStar()
     {
-        if (collectedStars >= starIcons.Length) return;
+        if (collectedStars >= starIcons.Length)
+            return;
 
         starIcons[collectedStars].enabled = true; // UI աստղը երևում է
         collectedStars++;

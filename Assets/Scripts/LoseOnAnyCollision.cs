@@ -31,6 +31,7 @@ public class LoseOnAnyCollision : MonoBehaviour
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
     }
+
     void WinCanvas()
     {
         winCanvas.SetActive(true);

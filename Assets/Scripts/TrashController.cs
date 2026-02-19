@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class ArrowController : MonoBehaviour
+public class TrashController : MonoBehaviour
 {
     public int collectedStars = 0;
     public TMP_Text starsText;
@@ -18,11 +18,12 @@ public class ArrowController : MonoBehaviour
             collectedStars++;
             UpdateStarsUI();
             Destroy(collision.gameObject);
+            GameManager.instance.AddGarbage();
         }
     }
 
     void UpdateStarsUI()
     {
-        starsText.text =""+ collectedStars;
+        starsText.text = "" + collectedStars;
     }
 }

@@ -1,12 +1,12 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountdownStart : MonoBehaviour
 {
     public TMP_Text countdownText;
     public AudioSource countdownAudio;
-    public AudioSource musicSource;
 
     void Start()
     {
@@ -32,10 +32,12 @@ public class CountdownStart : MonoBehaviour
         yield return StartCoroutine(AnimateCountdown(countdownText));
 
         countdownText.gameObject.SetActive(false);
-
         Time.timeScale = 1f;
-        if (musicSource != null)
-            musicSource.Play();
+
+        if (MusicManager.Instance != null && MusicManager.Instance.audioSource != null)
+        {
+            MusicManager.Instance.audioSource.Play();
+        }
     }
 
     IEnumerator AnimateCountdown(TMP_Text text)
@@ -50,7 +52,6 @@ public class CountdownStart : MonoBehaviour
         while (t < duration)
         {
             t += Time.unscaledDeltaTime;
-
             float scale = Mathf.Lerp(0f, 2f, t / duration);
             scale += Mathf.Sin(t * Mathf.PI * 2) * 0.2f;
             text.transform.localScale = Vector3.one * scale;

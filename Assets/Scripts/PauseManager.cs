@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PauseButton : MonoBehaviour
+public class PauseManager : MonoBehaviour
 {
     public GameObject pauseCanvas;
     public GameObject countdownCanvas;
     public AudioSource countdownAudio;
-    public AudioSource backgroundMusic;
+    public AudioClip PauseMusic;
 
     public void PauseGame()
     {
@@ -26,9 +27,16 @@ public class PauseButton : MonoBehaviour
             countdownAudio.Pause();
         }
 
-        if (backgroundMusic != null && backgroundMusic.isPlaying)
-        {
-            backgroundMusic.Pause();
-        }
+        MusicManager.Instance.PlayMusic(PauseMusic);
+    }
+
+    public void Resume()
+    {
+        if (pauseCanvas != null)
+            pauseCanvas.SetActive(false);
+
+        Time.timeScale = 1f;
+
+        MusicManager.Instance.PlayMusicBySceneIndex(SceneManager.GetActiveScene().buildIndex);
     }
 }

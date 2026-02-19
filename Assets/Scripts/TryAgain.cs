@@ -17,6 +17,11 @@ public class TryAgain : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+
+        if (MusicManager.Instance != null && MusicManager.Instance.audioSource != null)
+        {
+            MusicManager.Instance.audioSource.Stop();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
