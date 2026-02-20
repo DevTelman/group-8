@@ -46,4 +46,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CountdownStart
   countdownText: {fileID: 0}
   countdownAudio: {fileID: 0}
-  musicSource: {fileID: 0}
