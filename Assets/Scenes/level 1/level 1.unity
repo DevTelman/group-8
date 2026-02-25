@@ -5865,7 +5865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3557885465657244062, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5102802349009726516, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_Pivot.x
@@ -6257,8 +6257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 597.79, y: 450.9}
-  m_SizeDelta: {x: 172.4323, y: 122.4903}
+  m_AnchoredPosition: {x: 607, y: 447.13}
+  m_SizeDelta: {x: 161.6357, y: 119.1142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146107470
 MonoBehaviour:
@@ -21216,7 +21216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.4151
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32058,7 +32058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143405251238068556, guid: 4f18dd5af4764bc42a4b3b990acd6973, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.09
+      value: 5.6849003
       objectReference: {fileID: 0}
     - target: {fileID: 9143405251238068556, guid: 4f18dd5af4764bc42a4b3b990acd6973, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54992,7 +54992,7 @@ Transform:
   m_GameObject: {fileID: 1372292052}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 270.45694, y: 2.0895002, z: 0}
+  m_LocalPosition: {x: 270.47, y: 2.0895002, z: 0}
   m_LocalScale: {x: 1.1632, y: 1.1632, z: 1.1632}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86038,9 +86038,10 @@ GameObject:
   - component: {fileID: 2112164765}
   - component: {fileID: 2112164764}
   - component: {fileID: 2112164763}
+  - component: {fileID: 2112164767}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Safe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86137,6 +86138,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112164767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112164762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30857fb49264651459d424ab22c797b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoseOnAnyCollision
+  gameOverCanvas: {fileID: 142345209}
+  winCanvas: {fileID: 2118318233}
+  safeTag: Safe
 --- !u!1 &2115162320
 GameObject:
   m_ObjectHideFlags: 0
@@ -100666,8 +100682,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 838.49994, y: 465.30002}
-  m_SizeDelta: {x: 270, y: 165.4}
+  m_AnchoredPosition: {x: 820.34717, y: 454.69263}
+  m_SizeDelta: {x: 279.3058, y: 170.6247}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &6340471493087521975
 SpriteRenderer:
