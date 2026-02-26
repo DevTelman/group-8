@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5102802349009726516
 RectTransform:
   m_ObjectHideFlags: 0
@@ -216,6 +216,30 @@ PrefabInstance:
     - target: {fileID: 6639520738784997744, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
       propertyPath: m_Transition
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639520738784997744, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639520738784997744, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639520738784997744, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639520738784997744, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToHomeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639520738784997744, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HomeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639520738784997744, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7033224617322807551, guid: 8835ec650cd633344a5ec88a4e3ecf1f, type: 3}
       propertyPath: m_Sprite
@@ -501,6 +525,30 @@ PrefabInstance:
     - target: {fileID: 6503972909414627923, guid: be64790a98ee00644bd76b7e569957f4, type: 3}
       propertyPath: m_Transition
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503972909414627923, guid: be64790a98ee00644bd76b7e569957f4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503972909414627923, guid: be64790a98ee00644bd76b7e569957f4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503972909414627923, guid: be64790a98ee00644bd76b7e569957f4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503972909414627923, guid: be64790a98ee00644bd76b7e569957f4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeaveLeveleGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503972909414627923, guid: be64790a98ee00644bd76b7e569957f4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LeaveGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503972909414627923, guid: be64790a98ee00644bd76b7e569957f4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3053067052081138632, guid: be64790a98ee00644bd76b7e569957f4, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ProgressBar : MonoBehaviour
 {
     public Transform player;
-    public float endX = 430.17f;
+    public float endX = 283.4864f;
     public Image fillImage;
 
     private float startX = 0f;
@@ -24,7 +24,5 @@ public class ProgressBar : MonoBehaviour
 
         // Update fill amount
         fillImage.fillAmount = roundedProgress;
-
-        Debug.Log(progress);
     }
 }
