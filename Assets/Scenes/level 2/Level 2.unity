@@ -30868,6 +30868,10 @@ PrefabInstance:
       propertyPath: countdownText
       value: 
       objectReference: {fileID: 1792710362}
+    - target: {fileID: 8701437084189305113, guid: a282ac35d210e4842bf3366b8210a8e9, type: 3}
+      propertyPath: countdownAudio
+      value: 
+      objectReference: {fileID: 833951957}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45422,7 +45426,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a49cae42a0a013c499fbe8c7d2835ef1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
