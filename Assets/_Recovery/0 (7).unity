@@ -1255,9 +1255,9 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: a3119844b5979454f86436db9a27070b, type: 3}
     waitForCountdown: 0
   - sceneIndex: 5
-    audioClip: {fileID: 8300000, guid: 8ceb6590fbdaf5d4d9b1cd442cee4c46, type: 3}
+    audioClip: {fileID: 8300000, guid: 2c518f4a22251d444ab56b9cd6321375, type: 3}
     waitForCountdown: 1
-  - sceneIndex: 6
+  - sceneIndex: 5
     audioClip: {fileID: 8300000, guid: 2c518f4a22251d444ab56b9cd6321375, type: 3}
     waitForCountdown: 1
 --- !u!82 &1694920379
