@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +9,11 @@ public class GameManager : MonoBehaviour
     public int totalStars = 0;
     public int totalGarbage = 0;
 
-    public TMP_Text totalStarsText;
-    public TMP_Text totalGarbageText;
+    [Header("Current Level Scores")]
+    public int currentLevelStars = 0;
+    public int currentLevelGarbage = 0;
+
+    private TMP_Text levelGarbageText;
 
     private void Awake()
     {
@@ -17,6 +21,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            LoadData(); // Բեռնում ենք պահպանված տվյալները
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -24,24 +30,66 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Time.timeScale = 1f; // Համոզվում ենք, որ խաղը կանգնած չէ
+        currentLevelStars = 0;
+        currentLevelGarbage = 0;
+        FindUITexts();
+        UpdateUI();
+    }
+
+    private void FindUITexts()
+    {
+        // Լեվելի տեքստը
+        GameObject garbageObj = GameObject.Find("LevelGarbage");
+        if (garbageObj != null)
+            levelGarbageText = garbageObj.GetComponent<TMP_Text>();
+
+        // Մենյուի տեքստերը
+        GameObject totalStarObj = GameObject.Find("TotalStarsText");
+        GameObject totalGarbageObj = GameObject.Find("TotalGarbageText");
+
+        if (totalStarObj != null)
+            totalStarObj.GetComponent<TMP_Text>().text = totalStars.ToString();
+        if (totalGarbageObj != null)
+            totalGarbageObj.GetComponent<TMP_Text>().text = totalGarbage.ToString();
+    }
+
     public void AddStar()
     {
-        totalStars++;
-        UpdateUI();
+        currentLevelStars++;
     }
 
     public void AddGarbage()
     {
-        totalGarbage++;
+        currentLevelGarbage++;
         UpdateUI();
+    }
+
+    public void LevelWon()
+    {
+        totalStars += currentLevelStars;
+        totalGarbage += currentLevelGarbage;
+        SaveData(); // Պահպանում ենք հաղթելուց հետո
     }
 
     public void UpdateUI()
     {
-        if (totalStarsText != null)
-            totalStarsText.text = totalStars.ToString();
+        if (levelGarbageText != null)
+            levelGarbageText.text = currentLevelGarbage.ToString();
+    }
 
-        if (totalGarbageText != null)
-            totalGarbageText.text = totalGarbage.ToString();
+    void SaveData()
+    {
+        PlayerPrefs.SetInt("TotalStars", totalStars);
+        PlayerPrefs.SetInt("TotalGarbage", totalGarbage);
+        PlayerPrefs.Save();
+    }
+
+    void LoadData()
+    {
+        totalStars = PlayerPrefs.GetInt("TotalStars", 0);
+        totalGarbage = PlayerPrefs.GetInt("TotalGarbage", 0);
     }
 }

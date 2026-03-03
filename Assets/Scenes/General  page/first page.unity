@@ -150,8 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   totalStars: 0
   totalGarbage: 0
-  totalStarsText: {fileID: 1871488627}
-  totalGarbageText: {fileID: 2091063140}
+  currentLevelStars: 0
+  currentLevelGarbage: 0
 --- !u!4 &80360142
 Transform:
   m_ObjectHideFlags: 0
@@ -1490,7 +1490,7 @@ GameObject:
   - component: {fileID: 1871488628}
   - component: {fileID: 1871488627}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TotalStarsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1833,7 +1833,7 @@ GameObject:
   - component: {fileID: 2091063141}
   - component: {fileID: 2091063140}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TotalGarbageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

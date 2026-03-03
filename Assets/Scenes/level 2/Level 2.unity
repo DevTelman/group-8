@@ -34755,6 +34755,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4001425470448128386, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1808305451}
+    - target: {fileID: 4001425470448128386, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeaveLeveleGame
+      objectReference: {fileID: 0}
     - target: {fileID: 5102802349009726516, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -34834,6 +34842,14 @@ PrefabInstance:
     - target: {fileID: 5102802349009726516, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680473710397997366, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 900483466}
+    - target: {fileID: 6680473710397997366, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToHomeScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -59466,8 +59482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb695b6c2797e548b16f178d897ec6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowController
-  collectedStars: 3
-  starsText: {fileID: 1381404813}
 --- !u!114 &1023199782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79531,7 +79545,7 @@ GameObject:
   - component: {fileID: 1381404814}
   - component: {fileID: 1381404813}
   m_Layer: 0
-  m_Name: TrashText
+  m_Name: LevelGarbage
   m_TagString: CollectedStarsText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

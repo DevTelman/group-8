@@ -4,8 +4,7 @@ public class LoseOnAnyCollision : MonoBehaviour
 {
     public GameObject gameOverCanvas;
     public GameObject winCanvas;
-
-    public string safeTag = "Safe"; // tag, որի հետ բախվելիս GameOver չի լինի
+    public string safeTag = "Safe";
 
     void Start()
     {
@@ -15,14 +14,13 @@ public class LoseOnAnyCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Եթե բախված օբյեկտը ՉՈՒՆԻ safeTag
-        if (!collision.gameObject.CompareTag(safeTag))
+        if (collision.gameObject.CompareTag(safeTag))
         {
-            GameOver();
+            Win();
         }
         else
         {
-            WinCanvas();
+            GameOver();
         }
     }
 
@@ -32,8 +30,9 @@ public class LoseOnAnyCollision : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    void WinCanvas()
+    void Win()
     {
+        GameManager.instance.LevelWon();
         winCanvas.SetActive(true);
         Time.timeScale = 0f;
     }

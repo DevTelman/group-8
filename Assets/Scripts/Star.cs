@@ -2,23 +2,14 @@
 
 public class Star : MonoBehaviour
 {
-    private StarManager starManager;
     private bool collected = false;
-
-    void Start()
-    {
-        starManager = FindObjectOfType<StarManager>();
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (collected)
-            return;
-
-        if (other.transform.root.CompareTag("Player"))
+        if (!collected && other.transform.root.CompareTag("Player"))
         {
             collected = true;
-            starManager.CollectStar();
+            FindObjectOfType<StarManager>()?.CollectStar();
             GameManager.instance.AddStar();
             Destroy(gameObject);
         }
