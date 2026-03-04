@@ -10,21 +10,26 @@ public class IntroLoader : MonoBehaviour
     public GameObject startButton;
     public GameObject hubButton;
 
+    // Ավելացնում ենք երկու նոր փոփոխականները
+    public GameObject star;
+    public GameObject trash;
+
     public float firstPhaseTime = 2.5f;
     public float secondPhaseTime = 2.5f;
 
-    // Այս փոփոխականը պահում է, աշխատե՞լ է Loader-ը արդեն
     private static bool loaderPlayed = false;
 
     void Start()
     {
-        // Loader-ը աշխատում է միայն առաջին սցենար + առաջին անգամ բացվելիս
         if (SceneManager.GetActiveScene().buildIndex == 0 && !loaderPlayed)
         {
-            loaderPlayed = true; // նշում ենք, որ Loader-ը սկսեց աշխատել
+            loaderPlayed = true;
 
+            // Թաքցնում ենք ամեն ինչ լոդինգի սկզբում
             startButton.SetActive(false);
             hubButton.SetActive(false);
+            star.SetActive(false); // Անջատում ենք աստղը
+            trash.SetActive(false); // Անջատում ենք աղբամանը (կամ ինչ որ նկար է)
 
             loaderCircle.fillAmount = 0f;
             loaderCircle.gameObject.SetActive(true);
@@ -34,11 +39,13 @@ public class IntroLoader : MonoBehaviour
         }
         else
         {
-            // Այլ դեպքերում Loader-ը ընդհանրապես չի երևում
+            // Եթե սա առաջին անգամը չէ, ամեն ինչ միացնում ենք միանգամից
             loaderCircle.gameObject.SetActive(false);
             loaderImage.SetActive(false);
             startButton.SetActive(true);
             hubButton.SetActive(true);
+            star.SetActive(true);
+            trash.SetActive(true);
         }
     }
 
@@ -65,9 +72,14 @@ public class IntroLoader : MonoBehaviour
             yield return null;
         }
 
+        // Լոդինգը պրծավ, թաքցնում ենք լոդերը
         loaderCircle.gameObject.SetActive(false);
         loaderImage.SetActive(false);
+
+        // Միացնում ենք բոլոր կոճակներն ու նկարները
         startButton.SetActive(true);
         hubButton.SetActive(true);
+        star.SetActive(true);
+        trash.SetActive(true);
     }
 }

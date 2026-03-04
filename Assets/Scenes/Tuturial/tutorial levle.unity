@@ -527,13 +527,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 412158300877810784, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 437.8667
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158300877810784, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 134.7567
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158300877810784, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -352
+      objectReference: {fileID: 0}
+    - target: {fileID: 412158300877810784, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -162
+      objectReference: {fileID: 0}
     - target: {fileID: 3557885465657244062, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_Name
       value: 'Win-Canvas '
       objectReference: {fileID: 0}
     - target: {fileID: 3557885465657244062, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4001425470448128386, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

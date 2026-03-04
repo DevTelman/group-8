@@ -237,29 +237,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136932804}
-  - component: {fileID: 136932803}
+  - component: {fileID: 136932805}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: threeevelution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &136932803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136932802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2430ea82600aa504ca00d569fea49475, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BloomFlash
-  volume: {fileID: 169810631}
-  maxBloom: 8
-  flashDuration: 1
 --- !u!4 &136932804
 Transform:
   m_ObjectHideFlags: 0
@@ -275,55 +260,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &169810630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 169810632}
-  - component: {fileID: 169810631}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &169810631
+--- !u!114 &136932805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169810630}
+  m_GameObject: {fileID: 136932802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Script: {fileID: 11500000, guid: e70a01455ef25fa4fb840c22fa5fa8a6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 73326577e79643b488aef640b0394111, type: 2}
---- !u!4 &169810632
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169810630}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 914.2832, y: 543.531, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::ImageFader
+  treeStages:
+  - {fileID: 975797128}
+  - {fileID: 972989191}
+  - {fileID: 2025291704}
+  - {fileID: 2135143020}
+  fadeDuration: 1
 --- !u!1 &208012944
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +549,7 @@ GameObject:
   - component: {fileID: 972989188}
   - component: {fileID: 972989190}
   - component: {fileID: 972989189}
+  - component: {fileID: 972989191}
   m_Layer: 5
   m_Name: Image 2
   m_TagString: Untagged
@@ -659,6 +614,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972989187}
   m_CullTransparentMesh: 1
+--- !u!225 &972989191
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972989187}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &975797124
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +637,7 @@ GameObject:
   - component: {fileID: 975797125}
   - component: {fileID: 975797127}
   - component: {fileID: 975797126}
+  - component: {fileID: 975797128}
   m_Layer: 5
   m_Name: Image 1
   m_TagString: Untagged
@@ -734,6 +702,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975797124}
   m_CullTransparentMesh: 1
+--- !u!225 &975797128
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975797124}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1199712652
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,12 +743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25aa5bb2b9a6b524bbdd2713b3a8c118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImageTransition
-  targetImage: {fileID: 0}
-  newSprite: {fileID: 0}
-  canvasGroup: {fileID: 0}
-  fadeDuration: 0.5
-  scaleAmount: 1.2
-  scaleDuration: 0.5
 --- !u!4 &1199712654
 Transform:
   m_ObjectHideFlags: 0
@@ -1393,6 +1367,7 @@ GameObject:
   - component: {fileID: 2025291701}
   - component: {fileID: 2025291703}
   - component: {fileID: 2025291702}
+  - component: {fileID: 2025291704}
   m_Layer: 5
   m_Name: Image 3
   m_TagString: Untagged
@@ -1457,6 +1432,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025291700}
   m_CullTransparentMesh: 1
+--- !u!225 &2025291704
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025291700}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2135143016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1455,7 @@ GameObject:
   - component: {fileID: 2135143017}
   - component: {fileID: 2135143019}
   - component: {fileID: 2135143018}
+  - component: {fileID: 2135143020}
   m_Layer: 5
   m_Name: Image 4
   m_TagString: Untagged
@@ -1532,6 +1520,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135143016}
   m_CullTransparentMesh: 1
+--- !u!225 &2135143020
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135143016}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1542,6 +1542,5 @@ SceneRoots:
   - {fileID: 208012947}
   - {fileID: 804222826}
   - {fileID: 1199712654}
-  - {fileID: 169810632}
   - {fileID: 136932804}
   - {fileID: 1311869711}
