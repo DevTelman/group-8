@@ -5828,6 +5828,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -157.90796
       objectReference: {fileID: 0}
+    - target: {fileID: 2058090338675990699, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058090338675990699, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058090338675990699, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058090338675990699, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3074312146978289926, guid: 81dca7919d4e8f444a94c7d61a9ed587, type: 3}
       propertyPath: m_SizeDelta.y
       value: 685.7
@@ -21347,7 +21363,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2015995299}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 419355651020960774, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: maxX
@@ -21371,11 +21387,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.11
+      value: 4.430069
       objectReference: {fileID: 0}
     - target: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.05
+      value: 5.46
       objectReference: {fileID: 0}
     - target: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41865,12 +41881,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -42521,11 +42537,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1087382272 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4188011137332504831, guid: a34ad52ee5c4c2648a26198e683debba, type: 3}
-  m_PrefabInstance: {fileID: 559807775}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1089525500
 GameObject:
   m_ObjectHideFlags: 0
@@ -80515,6 +80526,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7511782332265490370, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511782332265490370, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511782332265490370, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511782332265490370, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 9109722826329053860, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -82785,7 +82812,6 @@ Transform:
   - {fileID: 2538220646044423512}
   - {fileID: 1971464975}
   - {fileID: 413750362}
-  - {fileID: 1087382272}
   - {fileID: 1438117751}
   - {fileID: 1563007881}
   - {fileID: 4423934924356820896}
@@ -91053,12 +91079,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.3
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -98991,12 +99017,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -104415,6 +104441,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1479804202481084365, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479804202481084365, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479804202481084365, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479804202481084365, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 2198306148022502291, guid: 4982d509baca73f438926eb2a3e37cea, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -107065,6 +107107,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 2015995299}
   - {fileID: 294571175}
+  - {fileID: 559807775}
   - {fileID: 1203610642}
   - {fileID: 2112164766}
   - {fileID: 831104347}
