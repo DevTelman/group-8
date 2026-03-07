@@ -6,11 +6,17 @@ public class Star : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!collected && other.transform.root.CompareTag("Player"))
+        if (!collected && other.CompareTag("Player"))
         {
-            collected = true;
+            collected = true; 
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.AddStar();
+            }
+
+            // Վիզուալ թարմացում
             FindObjectOfType<StarManager>()?.CollectStar();
-            GameManager.instance.AddStar(); 
+
             Destroy(gameObject);
         }
     }

@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    public GameObject winPanel; // Այստեղ գցիր քո Win Panel-ը Inspector-ից
+    public GameObject winPanel;
+    private bool hasWon = false; // Որպեսզի երկու անգամ չաշխատի
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ստուգում ենք՝ արդյոք Player-ն է հասել վերջնակետին
-        if (collision.CompareTag("Player"))
+        if (!hasWon && collision.CompareTag("Player"))
         {
+            hasWon = true;
             Win();
         }
     }
@@ -21,10 +22,7 @@ public class FinishLine : MonoBehaviour
         }
 
         Time.timeScale = 0f;
-
         if (winPanel != null)
-        {
             winPanel.SetActive(true);
-        }
     }
 }
