@@ -9,8 +9,7 @@ public class IntroLoader : MonoBehaviour
     public GameObject loaderImage;
     public GameObject startButton;
     public GameObject hubButton;
-
-    // Ավելացնում ենք երկու նոր փոփոխականները
+    public GameObject resetButton;
     public GameObject star;
     public GameObject trash;
 
@@ -25,11 +24,11 @@ public class IntroLoader : MonoBehaviour
         {
             loaderPlayed = true;
 
-            // Թաքցնում ենք ամեն ինչ լոդինգի սկզբում
             startButton.SetActive(false);
             hubButton.SetActive(false);
-            star.SetActive(false); // Անջատում ենք աստղը
-            trash.SetActive(false); // Անջատում ենք աղբամանը (կամ ինչ որ նկար է)
+            resetButton.SetActive(false);
+            star.SetActive(false);
+            trash.SetActive(false);
 
             loaderCircle.fillAmount = 0f;
             loaderCircle.gameObject.SetActive(true);
@@ -39,11 +38,11 @@ public class IntroLoader : MonoBehaviour
         }
         else
         {
-            // Եթե սա առաջին անգամը չէ, ամեն ինչ միացնում ենք միանգամից
             loaderCircle.gameObject.SetActive(false);
             loaderImage.SetActive(false);
             startButton.SetActive(true);
             hubButton.SetActive(true);
+            resetButton.SetActive(true);
             star.SetActive(true);
             trash.SetActive(true);
         }
@@ -72,13 +71,12 @@ public class IntroLoader : MonoBehaviour
             yield return null;
         }
 
-        // Լոդինգը պրծավ, թաքցնում ենք լոդերը
         loaderCircle.gameObject.SetActive(false);
         loaderImage.SetActive(false);
 
-        // Միացնում ենք բոլոր կոճակներն ու նկարները
         startButton.SetActive(true);
         hubButton.SetActive(true);
+        resetButton.SetActive(true);
         star.SetActive(true);
         trash.SetActive(true);
     }

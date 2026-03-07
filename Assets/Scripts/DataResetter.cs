@@ -3,16 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class DataResetter : MonoBehaviour
 {
-    // Այս ֆունկցիան ջնջում է ԲՈԼՈՐ պահպանված տվյալները
     public void ResetFullGameProgress()
     {
-        // Ջնջում է ամեն ինչ, ինչ պահվել է PlayerPrefs-ի մեջ
+        // 1. Ջնջում ենք պահպանված ֆայլերը
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
 
-        Debug.Log("Ամբողջ խաղի առաջընթացը զրոյացվեց:");
+        // 2. Զրոյացնում ենք GameManager-ի մեջի ակտիվ թվերը
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.totalStars = 0;
+            GameManager.instance.totalGarbage = 0;
+            GameManager.instance.currentLevelStars = 0;
+            GameManager.instance.currentLevelGarbage = 0;
 
-        // Վերաթարմացնում ենք ընթացիկ սցենան
+            // Թարմացնում ենք UI-ը, որպեսզի անմիջապես 0 երևա
+            GameManager.instance.UpdateTotalUI();
+            GameManager.instance.UpdateUI();
+        }
+
+        Debug.Log("Ամբողջ խաղի առաջընթացը զրոյացվեց և փոփոխականները թարմացվեցին:");
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
