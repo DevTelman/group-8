@@ -29492,7 +29492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92c118af1d2921499f45c91209e65da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FinishLine
-  winPanel: {fileID: 142345209}
+  winPanel: {fileID: 2118318233}
 --- !u!4 &736232943
 Transform:
   m_ObjectHideFlags: 0
@@ -80703,6 +80703,10 @@ PrefabInstance:
     - target: {fileID: 71694693434646048, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447400719480865036, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1197119819245034799, guid: 0a9ca37315d1aae48b5f593eda5d1029, type: 3}
       propertyPath: m_Name

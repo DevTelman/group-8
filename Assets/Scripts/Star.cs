@@ -8,15 +8,9 @@ public class Star : MonoBehaviour
     {
         if (!collected && other.CompareTag("Player"))
         {
-            collected = true; 
-            if (GameManager.instance != null)
-            {
-                GameManager.instance.AddStar();
-            }
-
-            // Վիզուալ թարմացում
+            collected = true;
+            GameManager.instance.AddStar();
             FindObjectOfType<StarManager>()?.CollectStar();
-
             Destroy(gameObject);
         }
     }

@@ -6,12 +6,10 @@ public class TrashController : MonoBehaviour
     {
         if (collision.CompareTag("Garbage"))
         {
+            // Աղբը հաշվում ենք միայն եթե այն դեռ ակտիվ է
             if (collision.gameObject.activeInHierarchy)
             {
-                if (GameManager.instance != null)
-                {
-                    GameManager.instance.AddGarbage();
-                }
+                GameManager.instance.AddGarbage();
                 collision.gameObject.SetActive(false);
                 Destroy(collision.gameObject);
             }

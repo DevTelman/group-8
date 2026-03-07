@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int currentLevelStars = 0;
     public int currentLevelGarbage = 0;
 
+    private bool isLevelOver = false; // Թույլ չի տալիս կրկնակի հաշվարկ
     private TMP_Text levelGarbageText;
 
     private void Awake()
@@ -33,15 +34,16 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Time.timeScale = 1f;
-        ResetCurrentLevelScores(); // Զրոյացնում ենք ամեն տեսարան բացելիս
+        ResetLevelData(); // Ամեն անգամ լեվելը բացելիս զրոյացնում ենք
         FindUITexts();
         UpdateUI();
     }
 
-    public void ResetCurrentLevelScores()
+    public void ResetLevelData()
     {
         currentLevelStars = 0;
         currentLevelGarbage = 0;
+        isLevelOver = false;
     }
 
     private void FindUITexts()
@@ -64,20 +66,34 @@ public class GameManager : MonoBehaviour
             totalGarbageObj.GetComponent<TMP_Text>().text = totalGarbage.ToString();
     }
 
-    public void AddStar() => currentLevelStars++;
+    public void AddStar()
+    {
+        if (!isLevelOver)
+            currentLevelStars++;
+    }
 
     public void AddGarbage()
     {
-        currentLevelGarbage++;
-        UpdateUI();
+        if (!isLevelOver)
+        {
+            currentLevelGarbage++;
+            UpdateUI();
+        }
     }
 
+    // Այս ֆունկցիան կանչվում է ՄԻԱՅՆ FinishLine-ի կողմից
     public void LevelWon()
     {
+        if (isLevelOver)
+            return; // Եթե արդեն հաշվել ենք, էլ չհաշվել
+
+        isLevelOver = true;
         totalStars += currentLevelStars;
         totalGarbage += currentLevelGarbage;
+
         SaveData();
-        UpdateTotalUI(); // Թարմացնում ենք UI-ը հաղթանակից հետո
+        UpdateTotalUI();
+        Debug.Log("Level Saved! Total Stars: " + totalStars);
     }
 
     public void UpdateUI()
