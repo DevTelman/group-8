@@ -29492,7 +29492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92c118af1d2921499f45c91209e65da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FinishLine
-  winPanel: {fileID: 2118318233}
+  winPanel: {fileID: 142345209}
 --- !u!4 &736232943
 Transform:
   m_ObjectHideFlags: 0
