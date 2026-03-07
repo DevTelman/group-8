@@ -6,7 +6,7 @@ public class TrashController : MonoBehaviour
     {
         if (collision.CompareTag("Garbage"))
         {
-            GameManager.instance.AddGarbage();
+            GameManager.instance.AddGarbage(); 
             Destroy(collision.gameObject);
         }
     }

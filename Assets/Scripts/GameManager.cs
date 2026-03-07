@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadData(); // Բեռնում ենք պահպանված տվյալները
+            LoadData();
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Time.timeScale = 1f; // Համոզվում ենք, որ խաղը կանգնած չէ
+        Time.timeScale = 1f;
         currentLevelStars = 0;
         currentLevelGarbage = 0;
         FindUITexts();
@@ -41,12 +41,10 @@ public class GameManager : MonoBehaviour
 
     private void FindUITexts()
     {
-        // Լեվելի տեքստը
         GameObject garbageObj = GameObject.Find("LevelGarbage");
         if (garbageObj != null)
             levelGarbageText = garbageObj.GetComponent<TMP_Text>();
 
-        // Մենյուի տեքստերը
         GameObject totalStarObj = GameObject.Find("TotalStarsText");
         GameObject totalGarbageObj = GameObject.Find("TotalGarbageText");
 
@@ -71,7 +69,7 @@ public class GameManager : MonoBehaviour
     {
         totalStars += currentLevelStars;
         totalGarbage += currentLevelGarbage;
-        SaveData(); // Պահպանում ենք հաղթելուց հետո
+        SaveData();
     }
 
     public void UpdateUI()

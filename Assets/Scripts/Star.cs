@@ -10,7 +10,7 @@ public class Star : MonoBehaviour
         {
             collected = true;
             FindObjectOfType<StarManager>()?.CollectStar();
-            GameManager.instance.AddStar();
+            GameManager.instance.AddStar(); 
             Destroy(gameObject);
         }
     }
