@@ -42388,7 +42388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgressBar
   player: {fileID: 1023199787}
-  endX: 248
+  endX: 265.4569
   fillImage: {fileID: 556102050}
 --- !u!4 &787549634
 Transform:
